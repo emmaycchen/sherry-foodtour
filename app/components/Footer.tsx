@@ -1,22 +1,32 @@
 import Image from "next/image";
 import Link from "next/link";
+import ObfuscatedMailLink from "./ObfuscatedMailLink";
 
 const sitemap = [
   [
-    { label: "About Me", href: "#about" },
-    { label: "Food Tour", href: "#tours" },
+    { label: "About Me", href: "/#about" },
+    { label: "Food Tour", href: "/#tours" },
     { label: "Day Tour", href: "#" },
   ],
   [
     { label: "FAQs", href: "/faqs" },
-    { label: "Testimonials", href: "#" },
-    { label: "Contact Me", href: "#contact" },
+    { label: "Testimonials", href: "/#testimonials" },
+    { label: "Contact Me", href: "/#contact" },
   ],
 ];
 
-const socials = [
+type Social = {
+  icon: string;
+  label: string;
+  w: number;
+  h: number;
+  href?: string;
+  mail?: boolean;
+};
+
+const socials: Social[] = [
   { icon: "/images/icon-instagram.svg", label: "Instagram", href: "https://www.instagram.com/sherrychang318/", w: 31, h: 29 },
-  { icon: "/images/icon-email.svg", label: "Email", href: "mailto:sherrychang318@gmail.com", w: 28, h: 22 },
+  { icon: "/images/icon-email.svg", label: "Email", mail: true, w: 28, h: 22 },
   { icon: "/images/icon-whatsapp.svg", label: "WhatsApp", href: "https://wa.me/886975724127", w: 28, h: 28 },
 ];
 
@@ -65,15 +75,26 @@ export default function Footer() {
           <ul className="flex items-start gap-5 md:justify-self-end">
             {socials.map((s) => (
               <li key={s.label}>
-                <a
-                  href={s.href}
-                  aria-label={s.label}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex h-10 w-10 items-center justify-center transition-opacity hover:opacity-70"
-                >
-                  <Image src={s.icon} alt="" width={s.w} height={s.h} className="object-contain" />
-                </a>
+                {s.mail ? (
+                  <ObfuscatedMailLink
+                    reversedLocal="813gnahcyrrehs"
+                    domain="gmail"
+                    tld="com"
+                    icon={s.icon}
+                    w={s.w}
+                    h={s.h}
+                  />
+                ) : (
+                  <a
+                    href={s.href}
+                    aria-label={s.label}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex h-10 w-10 items-center justify-center transition-opacity hover:opacity-70"
+                  >
+                    <Image src={s.icon} alt="" width={s.w} height={s.h} className="object-contain" />
+                  </a>
+                )}
               </li>
             ))}
           </ul>

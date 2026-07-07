@@ -57,7 +57,9 @@ export default function BookingForm() {
                 />
               </div>
               <a
-                href="tel:+886975724127"
+                href="https://wa.me/886975724127"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-4 flex items-center gap-4 text-lg transition-opacity hover:opacity-80"
               >
                 <Image src="/images/icon-whatsapp.svg" alt="" width={30} height={30} className="shrink-0" />

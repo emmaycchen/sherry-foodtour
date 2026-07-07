@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import ObfuscatedEmail from "../../components/ObfuscatedEmail";
 
 export default function ConfirmationPage() {
   return (
@@ -47,13 +48,15 @@ export default function ConfirmationPage() {
 
           {/* Contact details */}
           <div className="mt-6 flex flex-col items-center gap-3 text-xl">
-            <a
-              href="mailto:sherrychang318@gmail.com"
-              className="flex items-center gap-3 transition-opacity hover:opacity-80"
-            >
+            <div className="flex items-center gap-3">
               <Image src="/images/icon-email.svg" alt="" width={28} height={22} className="shrink-0" />
-              sherrychang318@gmail.com
-            </a>
+              <ObfuscatedEmail
+                reversedLocal="813gnahcyrrehs"
+                domain="gmail"
+                tld="com"
+                className="transition-opacity hover:opacity-80"
+              />
+            </div>
             <a
               href="https://wa.me/886975724127"
               target="_blank"

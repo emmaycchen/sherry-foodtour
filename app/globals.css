@@ -23,6 +23,13 @@
   --font-quicksand: "Quicksand", "Quicksand Fallback", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+  /* Offset anchor jumps so sections aren't hidden under the sticky Navbar
+     (lg:h-[80px]); a little breathing room above the heading. */
+  scroll-padding-top: 96px;
+}
+
 body {
   background: #ffffff;
   color: #000000;

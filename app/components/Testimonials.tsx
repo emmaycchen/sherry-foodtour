@@ -69,7 +69,7 @@ export default function Testimonials() {
   const next = () => setCenter((c) => (c + 1) % len);
 
   return (
-    <section className="w-full bg-muted text-black">
+    <section id="testimonials" className="w-full bg-muted text-black">
       <div className="mx-auto w-full max-w-[1440px] px-6 py-14 sm:px-10 md:py-16 lg:px-20 lg:py-20">
         {/* Heading with decorative arrows + dashed lines */}
         <div className="flex items-center gap-4">
