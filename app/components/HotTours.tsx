@@ -314,7 +314,7 @@ export default function HotTours({ variant = "default" }: { variant?: Variant } 
 
           {/* Day tour note + link */}
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
-            <span className="font-sans text-[16px] font-semibold leading-[40px] md:text-[20px]">
+            <span className="font-sans text-[16px] font-semibold leading-tight md:leading-[40px] md:text-[20px]">
               We also offer Day Tours and Customized Tours
             </span>
             <a href={variant === "detail" ? "/" : "#"} className="flex items-center gap-2">

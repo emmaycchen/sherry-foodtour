@@ -96,7 +96,7 @@ export default function Testimonials() {
             type="button"
             aria-label="Previous testimonial"
             onClick={prev}
-            className="absolute left-0 top-1/2 z-10 hidden -translate-x-1/2 -translate-y-1/2 h-10 w-10 items-center justify-center rounded-full bg-amber-400 text-black text-xl shadow-md hover:brightness-110 lg:flex"
+            className="absolute left-0 top-1/2 z-10 flex -translate-x-1/2 -translate-y-1/2 h-8 w-8 lg:h-10 lg:w-10 items-center justify-center rounded-full bg-amber-400 text-black text-sm lg:text-xl shadow-md hover:brightness-110 lg:flex"
           >
             &#8249;
           </button>
@@ -111,14 +111,13 @@ export default function Testimonials() {
             type="button"
             aria-label="Next testimonial"
             onClick={next}
-            className="absolute right-0 top-1/2 z-10 hidden translate-x-1/2 -translate-y-1/2 h-10 w-10 items-center justify-center rounded-full bg-amber-400 text-black text-xl shadow-md hover:brightness-110 lg:flex"
+            className="absolute right-0 top-1/2 z-10 flex translate-x-1/2 -translate-y-1/2 h-8 w-8 lg:h-10 lg:w-10 items-center justify-center rounded-full bg-amber-400 text-black text-sm lg:text-xl shadow-md hover:brightness-110 lg:flex"
           >
             &#8250;
           </button>
-        </div>
 
-        {/* Mobile / tablet: single centered card with dots */}
-        <div className="mt-10 lg:hidden">
+          {/* Mobile / tablet: single centered card with dots */}
+          <div className="mt-10 lg:hidden">
           <Card t={testimonials[center]} variant="center" />
           <div className="mt-6 flex justify-center gap-2">
             {testimonials.map((t, i) => (
@@ -132,6 +131,7 @@ export default function Testimonials() {
                 }`}
               />
             ))}
+          </div>
           </div>
         </div>
       </div>

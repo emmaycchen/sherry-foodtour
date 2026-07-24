@@ -27,7 +27,7 @@ export default function XimenPage() {
         <section className="relative w-full overflow-hidden">
           <div className="relative h-[480px] w-full sm:h-[600px] lg:h-[750px]">
             <Image
-              src="/images/ningxia.png"
+              src="/images/ximen.png"
               alt=""
               fill
               priority

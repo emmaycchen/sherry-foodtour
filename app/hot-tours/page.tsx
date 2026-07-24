@@ -114,19 +114,19 @@ export default function HotToursPage() {
                 </svg>
               </Link>
 
-              <div className="flex flex-1 flex-wrap items-center justify-center gap-x-4 gap-y-2 text-center">
-                <span className="font-sans text-[20px] font-semibold leading-[40px] text-black md:text-[24px]">
+              <div className="flex flex-1 flex-wrap items-center justify-end gap-x-4 gap-y-2">
+                <span className="font-sans text-[14px] font-semibold leading-tight text-black md:text-[16px]">
                   We also offer Day Tours and Customized Tours
                 </span>
                 <Link href="/" className="flex items-center gap-2 transition-opacity hover:opacity-80">
                   <Image
                     src="/images/icon-menu-red.svg"
                     alt=""
-                    width={35}
-                    height={35}
-                    className="h-[35px] w-[35px]"
+                    width={20}
+                    height={20}
+                    className="h-[20px] w-[20px]"
                   />
-                  <span className="font-ui text-[22px] font-semibold text-[#a52c17] md:text-[28px]">
+                  <span className="font-ui text-[14px] font-semibold text-[#a52c17] md:text-[16px]">
                     Go to Day Tour
                   </span>
                 </Link>
